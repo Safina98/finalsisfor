@@ -33,10 +33,10 @@ class Admin extends CI_Controller {
 	public function companyTambah(){
 		$this->load->view('admin/companyForm');	
 	}
-	function edit($id){
+	function editCompany($id){
 		$where = array('id' => $id);
-		$data['daftar_buku']= $this->DB_Model->edit_data($where, 'daftar_buku')->result();
-		$this->load->view('update',$data);
+		$data['company']= $this->db_company->edit_data($where, 'company')->result();
+		$this->load->view('admin/update',$data);
 	}
 	public function companyTambahAksi()
 	{
@@ -59,7 +59,21 @@ class Admin extends CI_Controller {
 		$this->db_company->delete_data($where,'company');
 		redirect('admin/company');
 	}	
-	
+	function update(){	
+		$nama_perusahaan = $this->input->post('nama_perusahaan');		
+		$no_tlp = $this->input->post('no_tlp');	
+		$email = $this->input->post('alamat');
+		$alamat = $this->input->post('email');
+		
+
+		$data =array(
+			'nama_perusahaan' =>$nama_perusahaan,
+			'no_tlp' =>$no_tlp,
+			'email' =>$alamat,
+			'alamat' =>$email);
+		$this->db_company->update_data($where,$data,'company');
+		redirect('admin/company');
+	}
 	public function library() {
 		$this->load->view('admin/library');
 	}

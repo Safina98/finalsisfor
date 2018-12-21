@@ -173,11 +173,12 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form action=" <?php echo base_url().'index.php/admin/companyTambahAksi'?>" method="post">
+                            <?php foreach ($company as $row) {?>
+                            <form action=" <?php echo base_url().'admin/updateCompany'?>" method="post">
                              
                                 <label for="password">Nama Perusahaan</label>
                                 <div class="form-group">
-                                    <div class="form-line">
+                                <div class="form-line">
                                         <input type="text" id="email_address" name="nama_perusahaan" class="form-control" placeholder="Enter yourcompany name" value="<?php echo $row->id ?>">
                                     </div>
                                 </div>
@@ -203,6 +204,7 @@
                                 <br>
                              <input class="btn btn-primary btn-block" type="submit" value="Simpan">
                             </form>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
