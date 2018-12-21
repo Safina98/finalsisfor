@@ -34,7 +34,21 @@
 
 <body class="theme-red">
     <!-- Page Loader -->
-   
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -180,26 +194,52 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        
-                                        <th>NAMA PERUSAHAAN</th>
-                                        <th>NO TELEPON</th>
-                                        <th>EMAIL</th>
-                                        <th>ALAMAT</th>
+                                        <th>#</th>
+                                        <th>FIRST NAME</th>
+                                        <th>LAST NAME</th>
+                                        <th>USERNAME</th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($finalsisfor as $u){ ?>
-        <tr>
-            <td><?php echo $u->nama_perusahaan ?></td>
-            <td><?php echo $u->no_tlp ?></td>
-            <td><?php echo $u->email ?></td>
-            <td><?php echo $u->alamat ?></td>
-            <td>
-                <?php echo anchor('admin/editCompany'.$u->id,'Edit'); ?></td>
-                <td><?= anchor('admin/hapusCompany/'.$u->id,'Hapus'); ?>     
-            </td>
-        </tr>
-        <?php } ?>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>
+                                        	<button type="button" class="btn btn-success waves-effect">
+			                                    <i class="material-icons">home</i>
+			                                </button>
+			                                <button type="button" class="btn btn-danger waves-effect">
+			                                    <i class="material-icons">flight_takeoff</i>
+			                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Larry</td>
+                                        <td>Jellybean</td>
+                                        <td>@lajelly</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Larry</td>
+                                        <td>Kikat</td>
+                                        <td>@lakitkat</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

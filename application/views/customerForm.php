@@ -34,7 +34,21 @@
 
 <body class="theme-red">
     <!-- Page Loader -->
-   
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -82,12 +96,6 @@
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
@@ -154,16 +162,16 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>NORMAL TABLES</h2>
+                <h2>FORM EXAMPLES</h2>
             </div>
-            <!-- Basic Table -->
+
+            <!-- Vertical Layout -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                BASIC TABLES
-                                <small>Basic example without any additional modification classes</small>
+                                VERTICAL LAYOUT
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -171,65 +179,67 @@
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="<?php echo site_url() ?>/admin/companyTambah">Tambah Data</a></li>
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="body table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        
-                                        <th>NAMA PERUSAHAAN</th>
-                                        <th>NO TELEPON</th>
-                                        <th>EMAIL</th>
-                                        <th>ALAMAT</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach($finalsisfor as $u){ ?>
-        <tr>
-            <td><?php echo $u->nama_perusahaan ?></td>
-            <td><?php echo $u->no_tlp ?></td>
-            <td><?php echo $u->email ?></td>
-            <td><?php echo $u->alamat ?></td>
-            <td>
-                <?php echo anchor('admin/editCompany'.$u->id,'Edit'); ?></td>
-                <td><?= anchor('admin/hapusCompany/'.$u->id,'Hapus'); ?>     
-            </td>
-        </tr>
-        <?php } ?>
-                                </tbody>
-                            </table>
+                        <div class="body">
+                            <form>
+                                <label for="email_address">Email Address</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
+                                    </div>
+                                </div>
+                                <label for="password">Username</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- #END# Basic Table -->
+            <!-- #END# Vertical Layout -->
         </div>
     </section>
 
     <!-- Jquery Core Js -->
-    <script src="/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>/assets/plugins/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core Js -->
-    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo base_url() ?>/assets/plugins/bootstrap/js/bootstrap.js"></script>
 
     <!-- Select Plugin Js -->
-    <script src="/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="<?php echo base_url() ?>/assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
     <!-- Slimscroll Plugin Js -->
-    <script src="/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="<?php echo base_url() ?>/assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
     <!-- Waves Effect Plugin Js -->
-    <script src="/node-waves/waves.js"></script>
+    <script src="<?php echo base_url() ?>/assets/plugins/node-waves/waves.js"></script>
+
+    <!-- Autosize Plugin Js -->
+    <script src="<?php echo base_url() ?>/assets/plugins/autosize/autosize.js"></script>
+
+    <!-- Moment Plugin Js -->
+    <script src="<?php echo base_url() ?>/assets/plugins/momentjs/moment.js"></script>
+
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="<?php echo base_url() ?>/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
     <!-- Custom Js -->
-    <script src="<?php echo base_url() ?>assets/js/admin.js"></script>
+    <script src="<?php echo base_url() ?>/assets/js/admin.js"></script>
+    <script src="<?php echo base_url() ?>/assets/js/pages/forms/basic-form-elements.js"></script>
 
     <!-- Demo Js -->
-    <script src="<?php echo base_url() ?>assets/js/demo.js"></script>
+    <script src="<?php echo base_url() ?>/assets/js/demo.js"></script>
 </body>
-
 </html>

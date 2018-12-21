@@ -34,7 +34,21 @@
 
 <body class="theme-red">
     <!-- Page Loader -->
-   
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -82,12 +96,6 @@
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
@@ -171,7 +179,7 @@
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="<?php echo site_url() ?>/admin/companyTambah">Tambah Data</a></li>
+                                        <li><a href="<?php echo site_url() ?>/admin/customerTambah">Tambah Data</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -180,26 +188,43 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        
-                                        <th>NAMA PERUSAHAAN</th>
-                                        <th>NO TELEPON</th>
-                                        <th>EMAIL</th>
-                                        <th>ALAMAT</th>
+                                        <th>#</th>
+                                        <th>FIRST NAME</th>
+                                        <th>LAST NAME</th>
+                                        <th>USERNAME</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($finalsisfor as $u){ ?>
-        <tr>
-            <td><?php echo $u->nama_perusahaan ?></td>
-            <td><?php echo $u->no_tlp ?></td>
-            <td><?php echo $u->email ?></td>
-            <td><?php echo $u->alamat ?></td>
-            <td>
-                <?php echo anchor('admin/editCompany'.$u->id,'Edit'); ?></td>
-                <td><?= anchor('admin/hapusCompany/'.$u->id,'Hapus'); ?>     
-            </td>
-        </tr>
-        <?php } ?>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Larry</td>
+                                        <td>Jellybean</td>
+                                        <td>@lajelly</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Larry</td>
+                                        <td>Kikat</td>
+                                        <td>@lakitkat</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

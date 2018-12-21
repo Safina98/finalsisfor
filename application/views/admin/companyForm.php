@@ -34,21 +34,7 @@
 
 <body class="theme-red">
     <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-            <p>Please wait...</p>
-        </div>
-    </div>
+   
     <!-- #END# Page Loader -->
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
@@ -187,21 +173,35 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form>
-                                <label for="email_address">Email Address</label>
+                            <form action=" <?php echo base_url().'index.php/admin/companyTambahAksi'?>" method="post">
+                             
+                                <label for="password">Nama Perusahaan</label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
+                                        <input type="text" id="email_address" name="nama_perusahaan" class="form-control" placeholder="Enter yourcompany name">
                                     </div>
                                 </div>
-                                <label for="password">Username</label>
+                                <label for="password">No Telepon</label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
+                                        <input type="text" id="email_address" name="no_tlp" class="form-control" placeholder="Enter your company contact">
                                     </div>
                                 </div>
+                                <label for="password">Email</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text"  id="email_address" class="form-control" name="email" placeholder="Enter your company email address">
+                                    </div>
+                                </div>
+                                <label for="email_address">Alamat</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="email_address" class="form-control" name="alamat" placeholder="Enter your company address">
+                                    </div>
+                                </div>
+
                                 <br>
-                                <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                             <input class="btn btn-primary btn-block" type="submit" value="Simpan">
                             </form>
                         </div>
                     </div>
