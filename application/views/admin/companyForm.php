@@ -173,7 +173,7 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form action=" <?php echo base_url().'/admin/companyTambahAksi'?>" method="post">
+                            <form action=" <?php echo base_url().'index.php/admin/companyTambahAksi'?>" method="post">
                              
                                 <label for="password">Nama Perusahaan</label>
                                 <div class="form-group">

@@ -195,9 +195,10 @@
             <td><?php echo $u->email ?></td>
             <td><?php echo $u->alamat ?></td>
             <td>
-                <?php echo anchor('admin/editCompany'.$u->id,'Edit'); ?></td>
+                <?php echo anchor('admin/editCompany/'.$u->id,'Edit'); ?></td>
                 <td><?= anchor('admin/hapusCompany/'.$u->id,'Hapus'); ?>     
             </td>
+            
         </tr>
         <?php } ?>
                                 </tbody>

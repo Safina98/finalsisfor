@@ -174,30 +174,30 @@
                         </div>
                         <div class="body">
                             <?php foreach ($company as $row) {?>
-                            <form action=" <?php echo base_url().'admin/updateCompany'?>" method="post">
-                             
+                            <form action=" <?php echo base_url().'index.php/admin/updateCompany'?>" method="post">
+                             <input type="hidden" name="id" value="<?php echo $row->id ?>">
                                 <label for="password">Nama Perusahaan</label>
                                 <div class="form-group">
                                 <div class="form-line">
-                                        <input type="text" id="email_address" name="nama_perusahaan" class="form-control" placeholder="Enter yourcompany name" value="<?php echo $row->id ?>">
+                                        <input type="text" id="email_address" name="nama_perusahaan" class="form-control" placeholder="Enter yourcompany name" value="<?php echo $row->nama_perusahaan ?>">
                                     </div>
                                 </div>
                                 <label for="password">No Telepon</label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="email_address" name="no_tlp" class="form-control" placeholder="Enter your company contact" value="<?php echo $row->id ?>">
+                                        <input type="text" id="email_address" name="no_tlp" class="form-control" placeholder="Enter your company contact" value="<?php echo $row->no_tlp ?>">
                                     </div>
                                 </div>
                                 <label for="password">Email</label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text"  id="email_address" class="form-control" name="email" placeholder="Enter your company email address" value="<?php echo $row->id ?>">
+                                        <input type="text"  id="email_address" class="form-control" name="email" placeholder="Enter your company email address" value="<?php echo $row->email ?>">
                                     </div>
                                 </div>
                                 <label for="email_address">Alamat</label>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="email_address" class="form-control" name="alamat" placeholder="Enter your company address" value="<?php echo $row->id ?>">
+                                        <input type="text" id="email_address" class="form-control" name="alamat" placeholder="Enter your company address" value="<?php echo $row->alamat ?>">
                                     </div>
                                 </div>
 

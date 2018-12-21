@@ -33,17 +33,13 @@ class Admin extends CI_Controller {
 	public function companyTambah(){
 		$this->load->view('admin/companyForm');	
 	}
-	function editCompany($id){
-		$where = array('id' => $id);
-		$data['company']= $this->db_company->edit_data($where, 'company')->result();
-		$this->load->view('admin/update',$data);
-	}
+	
 	public function companyTambahAksi()
 	{
 		$nama_perusahaan = $this->input->post('nama_perusahaan');		
 		$no_tlp = $this->input->post('no_tlp');	
-		$email = $this->input->post('alamat');
-		$alamat = $this->input->post('email');
+		$email = $this->input->post('email');
+		$alamat = $this->input->post('alamat');
 		
 
 		$data =array(
@@ -59,11 +55,16 @@ class Admin extends CI_Controller {
 		$this->db_company->delete_data($where,'company');
 		redirect('admin/company');
 	}	
-	function update(){	
+	function editCompany($id){
+		$where = array('id' => $id);
+		$data['company']= $this->db_company->edit_data($where, 'company')->result();
+		$this->load->view('admin/update',$data);
+	}
+	function updateCompany(){	
 		$nama_perusahaan = $this->input->post('nama_perusahaan');		
 		$no_tlp = $this->input->post('no_tlp');	
-		$email = $this->input->post('alamat');
-		$alamat = $this->input->post('email');
+		$email = $this->input->post('email');
+		$alamat = $this->input->post('alamat');
 		
 
 		$data =array(
@@ -71,6 +72,7 @@ class Admin extends CI_Controller {
 			'no_tlp' =>$no_tlp,
 			'email' =>$alamat,
 			'alamat' =>$email);
+		$where = array('id' =>$this->input->post('id'));
 		$this->db_company->update_data($where,$data,'company');
 		redirect('admin/company');
 	}
